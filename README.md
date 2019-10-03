@@ -1,6 +1,9 @@
 # Deep Photo Enhancment: Using Improved 1-Way GAN
 Our implmented project used an improved one-way GAN in order to provide an enhanced image. The network learns characteristics from a set of photographs that have the desired features the user prefers and applies these characteristics to the input image, transforming it into an enhanced image. The network is based on a Wasserstein GAN with additional modifications due to the infamous issue of convergence in one-way GANs. The first modification consisted of adding global features to the U-Net in order to capture the overall aesthetics of the image and locally adjusting the image. The second aspect was adding an adaptive weight scheme to reduce the sensitivity of the network on the weighting parameter of the gradient penalty and allowing for a more stable convergence. The last aspect added was individual batch normalization with the idea of improving the loss in the generator by maintaining a consistent set of inputs. With these modifications on the one-way GAN, we compare our results to the approach proposed by Chen using the PSNR scores and an evaluation on the visual quality of the images.
 
+### RESULTS
+<img https://github.com/nitinchakravarthy/Deep-Learning-Project/blob/master/Results/Result2.png/>
+Compares the results of our implementation vs the original implementation, ground truths and inputs
 
 ### Code Structure
 * ```Analysis Directory```: Provides the parsing of the log results in order to graph and analyze the pre-training and training network.
